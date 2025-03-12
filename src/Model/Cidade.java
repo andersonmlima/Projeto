@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 // Classe pública Cidade
 // Atributos privados
