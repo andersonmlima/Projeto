@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 import java.sql.Connection; // Classe Connection do pacote java.sql
 import java.sql.PreparedStatement; // Classe PreparedStatement do pacote java.sql
