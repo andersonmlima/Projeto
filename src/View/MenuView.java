@@ -1,22 +1,38 @@
 package View;
 
 import Model.Cidade;
+
 import java.util.List;
 import java.util.Scanner;
 
 public class MenuView {
     private Scanner scanner;
 
+    public static final String RESET = "\u001B[0m";
+    public static final String VERDE = "\u001B[32m";
+    public static final String CIANO = "\u001B[36m";
+    public static final String BLACK = "\u001B[30m";
+    public static final String FUNDO_VERDE = "\u001B[42m";
+
     public MenuView() {
         this.scanner = new Scanner(System.in);
     }
 
     public int exibirMenu() {
-        System.out.println("\n--- Menu ---");
-        System.out.println("1. Cadastrar nova cidade");
-        System.out.println("2. Cadastrar novo destino de viagem");
-        System.out.println("3. Sair");
-        System.out.print("Escolha uma opção: ");
+
+        String fundoVerdeFontePreta = FUNDO_VERDE + BLACK;
+
+        System.out.println(VERDE + "███    ███ ██    ██ ████████ ██████   █████  ██    ██ ███████ ██      " + RESET);
+        System.out.println(VERDE + "████  ████  ██  ██     ██    ██   ██ ██   ██ ██    ██ ██      ██      " + RESET);
+        System.out.println(VERDE + "██ ████ ██   ████      ██    ██████  ███████ ██    ██ █████   ██      " + RESET);
+        System.out.println(VERDE + "██  ██  ██    ██       ██    ██   ██ ██   ██  ██  ██  ██      ██      " + RESET);
+        System.out.println(VERDE + "██      ██    ██       ██    ██   ██ ██   ██   ████   ███████ ███████ " + RESET);
+
+        System.out.println(VERDE + "\n--- Menu ---" + RESET);
+        System.out.println(CIANO + "1. Cadastrar nova cidade" + RESET);
+        System.out.println(CIANO + "2. Cadastrar novo destino de viagem" + RESET);
+        System.out.println(CIANO + "3. Sair" + RESET);
+        System.out.print(fundoVerdeFontePreta + "Escolha uma opção: " + RESET);
         return scanner.nextInt();
     }
 
